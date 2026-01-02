@@ -1,0 +1,89 @@
+{
+    "restaurant_name": "Pizzeria LunaVita",
+    "restaurant_title": "Heet uit de oven, direct bij jou thuis",
+    "restaurant_description": "Bij LunaVita draait alles om echte Italiaanse smaken: luchtig deeg, langzaam gegaarde saus en ingrediënten waar we trots op zijn. We maken elke pizza vers op bestelling, zoals je het in Italië proeft. Onze klassiekers zijn vertrouwd, onze specials verrassend. Zin in een avondje makkelijk én lekker? Klik op “Bestel via Orderli Home” en wij doen de rest.",
+    "hero_description": "Verse pizza’s uit de steenoven, rijk belegd en razendsnel bezorgd. Bestel in 1 minuut en geniet zonder gedoe.",
+    "concept": [
+        {
+            "sectie": "1.15",
+            "type": "Hero",
+            "titel": "Heet uit de oven, direct bij jou thuis",
+            "tekst": "Verse pizza’s uit de steenoven, rijk belegd en razendsnel bezorgd. Bestel in 1 minuut en geniet zonder gedoe.",
+            "knop_tekst": "Bekijk Menu",
+            "knop_link": "#menu",
+            "afbeelding": "https:\/\/images.unsplash.com\/photo-1517248135467-4c7edcad34c4?w=1920&q=80",
+            "opmerkingen": "Grote hero sectie met restaurant sfeer foto"
+        },
+        {
+            "sectie": "6.3",
+            "type": "Over Ons",
+            "titel": "Over Pizzeria LunaVita",
+            "tekst": "Bij LunaVita draait alles om echte Italiaanse smaken: luchtig deeg, langzaam gegaarde saus en ingrediënten waar we trots op zijn. We maken elke pizza vers op bestelling, zoals je het in Italië proeft. Onze klassiekers zijn vertrouwd, onze specials verrassend. Zin in een avondje makkelijk én lekker? Klik op “Bestel via Orderli Home” en wij doen de rest.",
+            "knop_tekst": "Lees Meer",
+            "knop_link": "#over-ons",
+            "afbeelding": "https:\/\/images.unsplash.com\/photo-1555396273-367ea4eb4db5?w=800&q=80",
+            "opmerkingen": "Tekst links, afbeelding rechts"
+        },
+        {
+            "sectie": "4.3",
+            "type": "Features",
+            "titel": "Waarom kiezen voor Pizzeria LunaVita?",
+            "tekst": "Ontdek wat ons uniek maakt",
+            "knop_tekst": "",
+            "knop_link": "",
+            "afbeelding": "",
+            "opmerkingen": "Grid met 3-4 feature cards: Vers bereid, Snelle bezorging, Lokale ingrediënten, Uitstekende service"
+        },
+        {
+            "sectie": "2.5",
+            "type": "Menu Preview",
+            "titel": "Onze Specialiteiten",
+            "tekst": "Ontdek onze populairste gerechten",
+            "knop_tekst": "Bekijk Volledige Menu",
+            "knop_link": "#menu",
+            "afbeelding": "https:\/\/images.unsplash.com\/photo-1504674900247-0877df9cc836?w=1200&q=80",
+            "opmerkingen": "Grid met 6 menu items met foto's"
+        },
+        {
+            "sectie": "7.2",
+            "type": "Testimonials",
+            "titel": "Wat zeggen onze klanten",
+            "tekst": "Echte reviews van tevreden gasten",
+            "knop_tekst": "",
+            "knop_link": "",
+            "afbeelding": "",
+            "opmerkingen": "3-4 testimonial cards met sterren en quotes"
+        },
+        {
+            "sectie": "5.1",
+            "type": "Call to Action",
+            "titel": "Klaar om te bestellen?",
+            "tekst": "Bestel nu en krijg je favoriete gerechten snel thuisbezorgd",
+            "knop_tekst": "Bestel Nu",
+            "knop_link": "#bestellen",
+            "afbeelding": "",
+            "opmerkingen": "Prominente CTA banner met gradient achtergrond"
+        },
+        {
+            "sectie": "3.4",
+            "type": "Galerij",
+            "titel": "Sfeerimpressies",
+            "tekst": "Bekijk de sfeer van ons restaurant",
+            "knop_tekst": "",
+            "knop_link": "",
+            "afbeelding": "https:\/\/images.unsplash.com\/photo-1414235077428-338989a2e8c0?w=1200&q=80",
+            "opmerkingen": "Masonry grid met 6-8 restaurant\/food foto's"
+        },
+        {
+            "sectie": "8.2",
+            "type": "Contact",
+            "titel": "Neem contact op",
+            "tekst": "Heb je vragen? We staan voor je klaar!",
+            "knop_tekst": "Stuur Bericht",
+            "knop_link": "#contact",
+            "afbeelding": "",
+            "opmerkingen": "Contact formulier met naam, email, bericht velden"
+        }
+    ],
+    "generated_at": "2025-12-24 11:33:10"
+}

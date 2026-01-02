@@ -1,0 +1,40 @@
+Ik heb een Google Sheets bestand dat ik moet vullen met content voor een converterende bestelpagina voor restaurants. De pagina gebruikt PHP om dynamisch content uit de Google Sheets te halen.
+
+CONTEXT:
+Dit is een bestelpagina die bezoekers moet converteren om te klikken op een "Bestel via Orderli Home" knop. De pagina heeft een hero sectie, "Over Ons" sectie, locatie, openingstijden en "Waarom Ons" informatie.
+
+GOOGLE SHEETS STRUCTUUR:
+Rij 1: Headers (wordt overgeslagen)
+Rij 2 (A2) en verder: Data rijen
+
+KOLOMMEN:
+A - Domain name (bijv. "live.cenconcepts.nl" of "pizzeria-bella.nl") - gebruikt voor matching
+B - Restaurant naam (optioneel, voor overzicht)
+C - Page title/headline (grote titel, max 8-10 woorden, converterend)
+D - Orderli Home link URL (volledige https:// URL)
+E - Hero beschrijving (1-2 zinnen, pakkend, focus op versheid/snelheid/kwaliteit)
+F - Over ons tekst deel 1 (2-3 zinnen over restaurant, passie, geschiedenis)
+G - Over ons tekst deel 2 (2-3 zinnen, wat maakt uniek, call-to-action)
+H - Locatie tekst (1-2 zinnen, waar restaurant is en bezorggebied)
+I - Openingstijden (kan leeg zijn voor standaard, of geformatteerd per dag)
+J - Waarom Ons tekst (2-3 zinnen, unieke selling points)
+K - Logo URL (optioneel, volledige https:// URL, of leeg voor placeholder)
+L - Bezorging tijd (bijv. "30-45 min")
+M - Gratis bezorging vanaf (bijv. "€15")
+
+OPDRACHT:
+Genereer voor mij 3 verschillende restaurant rijen (rij 2, 3 en 4) met realistische, converterende content voor:
+1. Een Italiaans restaurant (pizzeria)
+2. Een Aziatisch restaurant (sushi/Thais)
+3. Een burger restaurant
+
+Voor elk restaurant:
+- Gebruik een uniek domain in kolom A
+- Maak converterende, aantrekkelijke teksten die mensen aanzetten tot bestellen
+- Alle teksten in het Nederlands
+- Authentiek en geloofwaardig
+- Focus op versheid, snelheid en kwaliteit
+- Gebruik emotie en voordelen
+
+Geef de content terug in een tabel formaat zodat ik het direct kan kopiëren naar Google Sheets.
+
