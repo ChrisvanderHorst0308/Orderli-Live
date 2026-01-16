@@ -9,8 +9,13 @@ $requestPath = ltrim($requestPath, '/');
 switch ($requestPath) {
     case '':
     case 'index.php':
+        require __DIR__ . '/index.php';
+        break;
     case 'generator.php':
         require __DIR__ . '/generator.php';
+        break;
+    case 'preset.php':
+        require __DIR__ . '/preset.php';
         break;
     case 'admin_login.php':
         require __DIR__ . '/admin_login.php';
@@ -22,8 +27,8 @@ switch ($requestPath) {
         readfile(__DIR__ . '/generated_concept.json');
         break;
     default:
-        // fallback to generator
-        require __DIR__ . '/generator.php';
+        // fallback to index
+        require __DIR__ . '/index.php';
         break;
 }
 
