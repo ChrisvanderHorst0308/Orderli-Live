@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+    <!-- Orderli text - bold white lowercase -->
+    <text x="10" y="45" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="bold" fill="white" letter-spacing="0">orderli</text>
+    <!-- Colorful confetti above the 'i' - Orderli logo pattern -->
+    <!-- 1. Yellow (top left) -->
+    <polygon points="152,3 158,6 156,11 150,8" fill="#FFD700"/>
+    <!-- 2. Light green (top right) -->
+    <polygon points="164,1 170,4 168,9 162,6" fill="#90EE90"/>
+    <!-- 3. Orange (below light green) -->
+    <polygon points="166,9 172,12 170,17 164,14" fill="#FFA500"/>
+    <!-- 4. Red (below yellow) -->
+    <polygon points="154,12 160,15 158,20 152,17" fill="#FF4444"/>
+    <!-- 5. Pink (below red) -->
+    <polygon points="156,22 162,25 160,30 154,27" fill="#FF69B4"/>
+    <!-- 6. Red (below orange) -->
+    <polygon points="168,19 174,22 172,27 166,24" fill="#FF6666"/>
+    <!-- 7. Orange (above pink, right) -->
+    <polygon points="170,16 176,19 174,24 168,21" fill="#FF8C00"/>
+</svg>

@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     ];
     
     // Save to pending projects JSON (backup)
-    $pendingFile = __DIR__ . '/pending_projects.json';
+    $pendingFile = __DIR__ . '/../data/pending_projects.json';
     $pendingProjects = [];
     if (file_exists($pendingFile)) {
         $pendingProjects = json_decode(file_get_contents($pendingFile), true) ?? [];
@@ -123,7 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
             return str_replace('"', '""', $field);
         }, $rowData)) . '"' . "\n";
         
-        $filename = 'new_project_' . date('Y-m-d_His') . '.csv';
+        $filename = __DIR__ . '/../data/new_project_' . date('Y-m-d_His') . '.csv';
         file_put_contents($filename, $csvOutput);
         
         $_SESSION['download_file'] = $filename;
@@ -413,7 +413,7 @@ if (isset($_GET['download']) && isset($_SESSION['download_file'])) {
             document.getElementById('location_text').value = 'Bezoek ons op onze locatie of laat je bestelling bezorgen. Wij bezorgen in de hele stad en omgeving.';
             document.getElementById('opening_hours').value = 'Maandag: 11:00 - 22:00\nDinsdag: 11:00 - 22:00\nWoensdag: 11:00 - 22:00\nDonderdag: 11:00 - 22:00\nVrijdag: 11:00 - 23:00\nZaterdag: 11:00 - 23:00\nZondag: 12:00 - 21:00';
             document.getElementById('why_us_text').value = 'Vers bereid, snelle bezorging en altijd met een glimlach. Wij staan bekend om onze kwaliteit en service. Bestel vandaag nog en ervaar het verschil!';
-            document.getElementById('logo_url').value = 'https://via.placeholder.com/150x50/dc2626/ffffff?text=LOGO';
+            document.getElementById('logo_url').value = 'https://i.ibb.co/wN1YhqLD/Orderli-logo-oranje-1.png';
             document.getElementById('bezorging_tijd').value = '30-45 min';
             document.getElementById('gratis_bezorging').value = '€15';
             

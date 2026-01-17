@@ -175,7 +175,7 @@ function generateWebflowConcept($restaurantName, $restaurantDescription, $restau
 $webflowConcept = generateWebflowConcept($restaurantName, $restaurantDescription, $restaurantTitle, $heroDescription);
 
 // Save to JSON file for localhost:8001
-$outputFile = 'generated_concept.json';
+$outputFile = __DIR__ . '/../data/generated_concept.json';
 file_put_contents($outputFile, json_encode([
     'restaurant_name' => $restaurantName,
     'restaurant_title' => $restaurantTitle,

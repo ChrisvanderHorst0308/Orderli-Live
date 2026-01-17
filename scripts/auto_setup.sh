@@ -59,18 +59,22 @@ if [[ "$response" =~ ^[JjYy]$ ]]; then
     echo ""
     echo "⚠️  BELANGRIJK: Je hebt 2 terminals nodig!"
     echo ""
+    # Get project root directory
+    PROJECT_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+    cd "$PROJECT_ROOT"
+    
     echo "Terminal 1 (Generator - port 8000):"
-    echo "  cd $(pwd)"
-    echo "  php -S localhost:8000 router_8000.php"
+    echo "  cd $PROJECT_ROOT"
+    echo "  php -S localhost:8000 config/router_8000.php"
     echo ""
     echo "Terminal 2 (Viewer - port 8001):"
-    echo "  cd $(pwd)"
-    echo "  php -S localhost:8001 router_8001.php"
+    echo "  cd $PROJECT_ROOT"
+    echo "  php -S localhost:8001 config/router_8001.php"
     echo ""
     
     # Start de eerste server in de achtergrond
     echo "Starten van server op port 8000..."
-    php -S localhost:8000 router_8000.php > /dev/null 2>&1 &
+    php -S localhost:8000 config/router_8000.php > logs/server_8000.log 2>&1 &
     SERVER1_PID=$!
     echo "✅ Server 1 gestart (PID: $SERVER1_PID)"
     
@@ -78,7 +82,7 @@ if [[ "$response" =~ ^[JjYy]$ ]]; then
     
     # Start de tweede server in de achtergrond
     echo "Starten van server op port 8001..."
-    php -S localhost:8001 router_8001.php > /dev/null 2>&1 &
+    php -S localhost:8001 config/router_8001.php > logs/server_8001.log 2>&1 &
     SERVER2_PID=$!
     echo "✅ Server 2 gestart (PID: $SERVER2_PID)"
     
@@ -95,6 +99,5 @@ if [[ "$response" =~ ^[JjYy]$ ]]; then
 else
     echo ""
     echo "Servers niet gestart. Start ze handmatig met:"
-    echo "  Terminal 1: php -S localhost:8000 router_8000.php"
-    echo "  Terminal 2: php -S localhost:8001 router_8001.php"
+    echo "  ./scripts/start_servers.sh"
 fi

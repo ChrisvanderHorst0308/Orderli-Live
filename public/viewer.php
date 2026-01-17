@@ -2,7 +2,7 @@
 // Viewer pagina - toont de gegenereerde Webflow concept content
 // Draait op localhost:8001
 
-$conceptFile = 'generated_concept.json';
+$conceptFile = __DIR__ . '/../data/generated_concept.json';
 
 if (!file_exists($conceptFile)) {
     die('Geen concept gevonden. Genereer eerst een concept op localhost:8000/generator.php');

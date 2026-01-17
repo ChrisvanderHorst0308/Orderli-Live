@@ -3,14 +3,16 @@
 # Script om servers automatisch te starten
 # Gebruik dit nadat PHP is geïnstalleerd
 
-cd "$(dirname "$0")"
+# Get project root directory (parent of scripts directory)
+PROJECT_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$PROJECT_ROOT"
 
 # Check of PHP beschikbaar is
 if ! command -v php &> /dev/null; then
     echo "❌ PHP is niet geïnstalleerd!"
     echo ""
     echo "Installeer eerst PHP met:"
-    echo "  ./auto_setup.sh"
+    echo "  ./scripts/auto_setup.sh"
     echo ""
     echo "Of handmatig:"
     echo "  1. Installeer Homebrew: /bin/bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
@@ -29,7 +31,7 @@ sleep 1
 
 # Start server 1 (port 8000)
 echo "🚀 Starten van server op port 8000 (Generator)..."
-php -S localhost:8000 router_8000.php > server_8000.log 2>&1 &
+php -S localhost:8000 config/router_8000.php > logs/server_8000.log 2>&1 &
 SERVER1_PID=$!
 echo "   ✅ Server 1 gestart (PID: $SERVER1_PID)"
 
@@ -37,7 +39,7 @@ sleep 1
 
 # Start server 2 (port 8001)
 echo "🚀 Starten van server op port 8001 (Viewer)..."
-php -S localhost:8001 router_8001.php > server_8001.log 2>&1 &
+php -S localhost:8001 config/router_8001.php > logs/server_8001.log 2>&1 &
 SERVER2_PID=$!
 echo "   ✅ Server 2 gestart (PID: $SERVER2_PID)"
 
@@ -53,11 +55,11 @@ if lsof -ti:8000 > /dev/null 2>&1 && lsof -ti:8001 > /dev/null 2>&1; then
     echo "   - Viewer: http://localhost:8001"
     echo ""
     echo "📋 Logs:"
-    echo "   - server_8000.log"
-    echo "   - server_8001.log"
+    echo "   - logs/server_8000.log"
+    echo "   - logs/server_8001.log"
     echo ""
     echo "🛑 Om servers te stoppen:"
-    echo "   ./stop_servers.sh"
+    echo "   ./scripts/stop_servers.sh"
     echo "   of: kill $SERVER1_PID $SERVER2_PID"
 else
     echo ""

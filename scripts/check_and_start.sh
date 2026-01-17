@@ -2,7 +2,9 @@
 
 # Script om te controleren en servers te starten
 
-cd "$(dirname "$0")"
+# Get project root directory (parent of scripts directory)
+PROJECT_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$PROJECT_ROOT"
 
 echo "🔍 Controleren van installatie..."
 echo ""
@@ -29,13 +31,13 @@ if command -v php &> /dev/null; then
     
     # Start servers
     echo "🚀 Starten van servers..."
-    php -S localhost:8000 router_8000.php > server_8000.log 2>&1 &
+    php -S localhost:8000 config/router_8000.php > logs/server_8000.log 2>&1 &
     SERVER1_PID=$!
     echo "   ✅ Server 1 gestart (port 8000, PID: $SERVER1_PID)"
     
     sleep 1
     
-    php -S localhost:8001 router_8001.php > server_8001.log 2>&1 &
+    php -S localhost:8001 config/router_8001.php > logs/server_8001.log 2>&1 &
     SERVER2_PID=$!
     echo "   ✅ Server 2 gestart (port 8001, PID: $SERVER2_PID)"
     
@@ -54,7 +56,7 @@ if command -v php &> /dev/null; then
     else
         echo ""
         echo "⚠️  Servers zijn mogelijk niet correct gestart"
-        echo "   Check de log bestanden: server_8000.log en server_8001.log"
+        echo "   Check de log bestanden: logs/server_8000.log en logs/server_8001.log"
     fi
 else
     echo "❌ PHP niet gevonden"

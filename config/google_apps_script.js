@@ -23,22 +23,45 @@ function doPost(e) {
     // Parse incoming JSON data
     const data = JSON.parse(e.postData.contents);
     const rowData = data.row;
+    const action = data.action || 'add'; // Default to 'add'
     
     // Open the spreadsheet
     const ss = SpreadsheetApp.openById(SHEET_ID);
     const sheet = ss.getSheetByName(SHEET_NAME) || ss.getActiveSheet();
     
-    // Append the new row (starts from row 2, skipping header)
-    sheet.appendRow(rowData);
-    
-    // Return success response
-    return ContentService
-      .createTextOutput(JSON.stringify({
-        success: true,
-        message: 'Row added successfully',
-        row: rowData.length
-      }))
-      .setMimeType(ContentService.MimeType.JSON);
+    // Handle different actions
+    if (action === 'clear_and_add') {
+      // Clear all rows except header (row 1)
+      const lastRow = sheet.getLastRow();
+      if (lastRow > 1) {
+        sheet.deleteRows(2, lastRow - 1);
+      }
+      
+      // Insert the new row at row 2 (after header)
+      sheet.insertRowAfter(1);
+      const range = sheet.getRange(2, 1, 1, rowData.length);
+      range.setValues([rowData]);
+      
+      return ContentService
+        .createTextOutput(JSON.stringify({
+          success: true,
+          message: 'Sheet cleared and row added successfully',
+          row: rowData.length
+        }))
+        .setMimeType(ContentService.MimeType.JSON);
+    } else {
+      // Default: append the new row (starts from row 2, skipping header)
+      sheet.appendRow(rowData);
+      
+      // Return success response
+      return ContentService
+        .createTextOutput(JSON.stringify({
+          success: true,
+          message: 'Row added successfully',
+          row: rowData.length
+        }))
+        .setMimeType(ContentService.MimeType.JSON);
+    }
       
   } catch (error) {
     // Return error response
