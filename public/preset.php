@@ -291,8 +291,12 @@ $facebook = 'https://facebook.com/voorbeeldrestaurant';
             position: relative;
         }
         
-        .section-dark {
-            background: #0a0a0a;
+        .section-dark {            background: #0a0a0a;
+            background-image: url(https://billsburger.nl/wp-content/uploads/2022/12/Halftone_20.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat;
+            background-size: 70vw;
         }
         
         .section-light {
